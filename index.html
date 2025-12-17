@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+background: rgba(255,255,255,0.05);
+padding: 16px;
+border-radius: 14px;
+font-style: italic;
+}
+
+
+.timer {
+margin-top: 18px;
+text-align: center;
+font-weight: 600;
+font-size: 14px;
+color: #ffffff;
+}
+
+
+.tap {
+margin-top: 14px;
+text-align: center;
+font-size: 12px;
+color: #aaa;
+}
+</style>
+</head>
+<body>
+
+
+<div class="card">
+<h1>Para mi amor Aleja ❤️</h1>
+
+
+<p>
+Si pudiera elegir un lugar seguro, sería a tu lado.<br>
+Cuanto más tiempo estoy contigo, más te amo.
+</p>
+
+
+<div class="heart-tree">🌳❤️</div>
+
+
+<div class="message">
+Estuvimos muy cerca durante mucho tiempo, pero no fue sino desde hace 1 año que los dos conectamos emocional y románticamente.
+Créeme que eso ha sido lo mejor que me pudo pasar durante el 2025.
+Agradezco todo lo que haces por mí y que me entregues tanto amor y cariño.
+<br><br>
+<strong>Te Amo.</strong>
+</div>
+
+
+<div class="timer" id="contador"></div>
+<div class="tap">(Toca la pantalla y sonríe 💕)</div>
+</div>
+
+
+<script>
+const inicio = new Date('2024-12-01T00:00:00');
+
+
+function actualizarContador() {
+const ahora = new Date();
+let diff = Math.floor((ahora - inicio) / 1000);
+
+
+const dias = Math.floor(diff / 86400);
+diff %= 86400;
+const horas = Math.floor(diff / 3600);
+diff %= 3600;
+const minutos = Math.floor(diff / 60);
+const segundos = diff % 60;
+
+
+document.getElementById('contador').innerHTML =
+`Mi amor por ti comenzó hace:<br>${dias} días ${horas} horas ${minutos} minutos ${segundos} segundos`;
+}
+
+
+actualizarContador();
+setInterval(actualizarContador, 1000);
+</script>
+
+
+</body>
+</html>
